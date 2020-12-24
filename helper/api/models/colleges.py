@@ -22,6 +22,9 @@ class College(BaseContactModel):
 
 
 class CollegeDepartment(models.Model):
+    """
+    Department of given college, it is created by users
+    """
     name = models.CharField(max_length=255)
     college = models.ForeignKey("College", on_delete=models.CASCADE)
 
